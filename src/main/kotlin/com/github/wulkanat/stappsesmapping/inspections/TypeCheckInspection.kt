@@ -1,6 +1,6 @@
-package com.github.wulkanat.tsesmappingplugin.inspections
+package com.github.wulkanat.stappsesmapping.inspections
 
-import com.github.wulkanat.tsesmappingplugin.extensions.typeElementWithoutArray
+import com.github.wulkanat.stappsesmapping.extensions.typeElementWithoutArray
 import com.intellij.codeHighlighting.HighlightDisplayLevel
 import com.intellij.codeInspection.LocalInspectionToolSession
 import com.intellij.codeInspection.ProblemsHolder
@@ -35,6 +35,9 @@ class TypeCheckInspection : JSInspection() {
                                     if ((docComment.context as TypeScriptPropertySignature).typeElementWithoutArray()?.text != "string") {
                                         holder.registerProblem(tag, "@${tag.name} is only supported for string type")
                                     }
+                                }
+                                "indexable" -> {
+                                    holder.registerProblem(tag, "A field can't be indexable")
                                 }
                             }
                         }

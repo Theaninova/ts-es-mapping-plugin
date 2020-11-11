@@ -1,12 +1,12 @@
 # ts-es-mapping-plugin
 
 ![Build](https://github.com/wulkanat/ts-es-mapping-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/15371.svg)](https://plugins.jetbrains.com/plugin/15371)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/15371.svg)](https://plugins.jetbrains.com/plugin/15371)
 
 <!-- Plugin description -->
 Plugin to assist with annotating interfaces that are parsed by the ES Mapping generator
-from the [StApps Core-Tools](https://gitlab.com/openstapps/core-tools)
+from the [StApps Core-tools](https://gitlab.com/openstapps/core-tools)
 <!-- Plugin description end -->
 
 ## Features

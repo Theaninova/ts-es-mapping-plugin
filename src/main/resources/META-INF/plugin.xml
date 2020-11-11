@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>com.github.wulkanat.tsesmappingplugin</id>
-    <name>ts-es-mapping-plugin</name>
+    <id>com.github.wulkanat.stappsesmapping</id>
+    <name>StApps Elasticsearch Mapping</name>
     <vendor>wulkanat</vendor>
 
     <!-- Product and plugin compatibility requirements -->
@@ -9,8 +9,8 @@
     <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <annotator language="TypeScript" implementationClass="com.github.wulkanat.tsesmappingplugin.annotator.ESTypesAnnotator"/>
-        <codeInsight.parameterNameHints language="TypeScript" implementationClass="com.github.wulkanat.tsesmappingplugin.ESInlayHintsProvider" />
-        <inspectionToolProvider implementation="com.github.wulkanat.tsesmappingplugin.ESInspectionProvider"/>
+        <annotator language="TypeScript" implementationClass="com.github.wulkanat.stappsesmapping.annotator.ESTypesAnnotator"/>
+        <codeInsight.parameterNameHints language="TypeScript" implementationClass="com.github.wulkanat.stappsesmapping.ESInlayHintsProvider" />
+        <inspectionToolProvider implementation="com.github.wulkanat.stappsesmapping.ESInspectionProvider"/>
    </extensions>
 </idea-plugin>
