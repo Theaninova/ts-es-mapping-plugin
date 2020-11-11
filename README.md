@@ -1,4 +1,4 @@
-# ts-es-mapping-plugin
+# StApps Elasticsearch Mapping Plugin
 
 ![Build](https://github.com/wulkanat/ts-es-mapping-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/15371.svg)](https://plugins.jetbrains.com/plugin/15371)
