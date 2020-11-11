@@ -4,22 +4,34 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/publishing_plugin.html) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+Plugin to assist with annotating interfaces that are parsed by the ES Mapping generator
+from the [StApps Core-Tools](https://gitlab.com/openstapps/core-tools)
 <!-- Plugin description end -->
+
+## Features
+
+### Supported tags
+| Annotation        | Description                                                                                                             | Parameters                                                                       |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| `@aggregatable`   | used for generating of aggregations of the field if the core schema is used to put data into a database/key-value store | whether the property is being used on the top type or across all types: `global` |
+| `@float`          | number field is interpreted as float                                                                                    |                                                                                  |
+| `@indexable`      | marks the type as indexable if the core schema is used to put data into a database/key-value store                      |                                                                                  |
+| `@integer`        | number field is interpreted as integer                                                                                  |                                                                                  |
+| `@keyword`        | string field is interpreted as keyword                                                                                  |                                                                                  |
+| `@sortable`       | field is sortable if the core schema is used to put data into a database/key-value store                                | sort method to be used: `ducet`, `price`, `distance`                             |
+| `@text`           | string field is interpreted as text                                                                                     |                                                                                  |
+| `@filterable`     | non-object/nested field is filterable if the core schema is used to put data into a database/key-value store            |                                                                                  |
+| `@inheritTags`    | inherit all tags from another field                                                                                     | `[SCThingType]::[field]`                                                         |
+
+* `@integer` and `@float` only applies to `number`
+* `@text` and `@keyword` only applies to `string`
+* `@sortable ducet` only applies to `string`
+* `@sortable price` only applies to `number`
+* Interfaces only accept `@indexable`
+* Fields accept everything else except `@indexable`
+
+*Arrays are ignored and their element type is used*
 
 ## Installation
 
