@@ -1,8 +1,8 @@
 # StApps Elasticsearch Mapping Plugin
 
 ![Build](https://github.com/wulkanat/ts-es-mapping-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/15371.svg)](https://plugins.jetbrains.com/plugin/15371)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/15371.svg)](https://plugins.jetbrains.com/plugin/15371)
+[![Version](https://img.shields.io/jetbrains/plugin/v/15372-stapps-elasticsearch-mapping.svg)](https://plugins.jetbrains.com/plugin/15372-stapps-elasticsearch-mapping)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/15372-stapps-elasticsearch-mapping.svg)](https://plugins.jetbrains.com/plugin/15372-stapps-elasticsearch-mapping)
 
 <!-- Plugin description -->
 Plugin to assist with annotating interfaces that are parsed by the ES Mapping generator
