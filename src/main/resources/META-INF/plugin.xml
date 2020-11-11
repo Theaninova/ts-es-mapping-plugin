@@ -6,14 +6,11 @@
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.wulkanat.tsesmappingplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.wulkanat.tsesmappingplugin.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.wulkanat.tsesmappingplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+        <annotator language="TypeScript" implementationClass="com.github.wulkanat.tsesmappingplugin.annotator.ESTypesAnnotator"/>
+        <codeInsight.parameterNameHints language="TypeScript" implementationClass="com.github.wulkanat.tsesmappingplugin.ESInlayHintsProvider" />
+        <inspectionToolProvider implementation="com.github.wulkanat.tsesmappingplugin.ESInspectionProvider"/>
+   </extensions>
 </idea-plugin>
